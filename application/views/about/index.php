@@ -5,6 +5,5 @@
 		</div>
 	</div>
 	<br clear="all" />
-	<p>This is a sample of static page. Edit this page in
-		views/about/index.php</p>
+	<p>This is a sample of a static page. Edit this page in views/about/index.php</p>
 </div><!-- Close post -->
