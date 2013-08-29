@@ -135,6 +135,7 @@ class Post extends CI_Controller {
 		}
 
 		// Go through all the known fields and get the post values
+		$this->data = new stdClass;
 		$this->data->post = new stdClass;
 		foreach ($this->post_validation_rules as $key => $field) {
 			$this->data->post->$field['field'] = set_value($field['field']);
@@ -151,6 +152,7 @@ class Post extends CI_Controller {
 		$this->form_validation->set_rules('body', 'Body', 'required');
 		$this->form_validation->set_rules('image', 'Image', 'trim');
 		
+		$this->data = new stdClass;
 		$this->data->post = $this->post_model->get($id);
 		
 		if ($this->form_validation->run()) {
